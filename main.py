@@ -53,10 +53,10 @@ else:
 # 7. Készítsen szöveges állományt cb2.txt néven, melybe a forrásállományban található bejegyzéseket írja ki új formátumban! Az órákat és a perceket percekre számolja át az előző feladatban elkészített metódus (függvény) hívásával! Az új állomány első sorát és az adatsorokat a minta szerint alakítsa ki!
 
 with open("cb2.txt", 'w') as sw:
-        sw.writelines("Kezdes;Nev;AdasDb")
+        print("Kezdes;Nev;AdasDb", file=sw)
         for sor in lista:
             kezdes = AtszamolPercre( sor.ora, sor.perc)
-            sw.writelines(f"{kezdes};{sor.nev};{sor.adas}")
+            print(f"{kezdes};{sor.nev};{sor.adas}", file=sw)
 
 # 8. Határozza meg és írja ki a minta szerint a sofőrök számát a forrásállományban található becenevek alapján! Feltételezheti, hogy nincs két azonos becenév.
         
